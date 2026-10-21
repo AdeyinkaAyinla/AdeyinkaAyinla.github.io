@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayinla Adeyinka Adedapo | IT Support & Cybersecurity</title>
+<meta name="description" content="IT Support & Cybersecurity professional in Ireland. MSc Cybersecurity (University of Limerick) · CompTIA A+ · Network+ · AZ-900 · ISC2 CC. Hands-on L1/L2 support portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root, [data-theme="dark"] {
+    --bg: #0a0f17;
+    --bg-alt: #0e1520;
+    --card: #111a27;
+    --card-hi: #142033;
+    --line: #1f2c3f;
+    --text: #e8eef6;
+    --muted: #93a1b5;
+    --accent: #2dd4bf;
+    --accent-2: #38bdf8;
+    --accent-soft: rgba(45, 212, 191, .12);
+    --glow: 0 0 0 1px rgba(45,212,191,.35), 0 8px 30px rgba(45,212,191,.12);
+    --done: #4ade80; --done-soft: rgba(74,222,128,.12);
+    --prog: #fbbf24; --prog-soft: rgba(251,191,36,.12);
+    --plan: #93a1b5; --plan-soft: rgba(147,161,181,.12);
+  }
+  [data-theme="light"] {
+    --bg: #f7f9fc;
+    --bg-alt: #eef3f8;
+    --card: #ffffff;
+    --card-hi: #ffffff;
+    --line: #dde5ee;
+    --text: #0f1b2b;
+    --muted: #5a6a7f;
+    --accent: #0f9488;
+    --accent-2: #0369a1;
+    --accent-soft: rgba(15,148,136,.10);
+    --glow: 0 0 0 1px rgba(15,148,136,.35), 0 8px 24px rgba(15,27,43,.08);
+    --done: #15803d; --done-soft: rgba(21,128,61,.10);
+    --prog: #b45309; --prog-soft: rgba(180,83,9,.10);
+    --plan: #5a6a7f; --plan-soft: rgba(90,106,127,.10);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Inter", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+    transition: background .25s, color .25s;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Nav ---------- */
+  nav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; height: 64px; gap: 20px; }
+  .logo { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: 15px; border: 1px solid var(--accent); flex: none; }
+  .navlinks { display: flex; gap: 22px; margin-left: auto; font-size: 14px; font-weight: 500; }
+  .navlinks a { color: var(--muted); }
+  .navlinks a:hover { color: var(--text); }
+  .navright { display: flex; gap: 10px; align-items: center; }
+  .iconbtn { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--text); cursor: pointer; font-size: 16px; display: grid; place-items: center; }
+  .iconbtn:hover { border-color: var(--accent); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 14px; border: 1px solid var(--accent); transition: transform .15s, box-shadow .15s; white-space: nowrap; }
+  .btn:hover { transform: translateY(-1px); box-shadow: var(--glow); }
+  .btn.solid { background: var(--accent); color: var(--bg); }
+  .btn.line { color: var(--accent); background: transparent; }
+  .menu { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; padding: 84px 0 72px; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background:
+      radial-gradient(600px 300px at 85% 10%, rgba(45,212,191,.10), transparent 70%),
+      radial-gradient(500px 300px at 5% 90%, rgba(56,189,248,.08), transparent 70%); pointer-events: none; }
+  .hero::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 48px 48px; opacity: .25; mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: center; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--done); box-shadow: 0 0 0 0 var(--done); animation: pulse 2s infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,.6); } 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
+  h1 { font-size: clamp(34px, 5.4vw, 56px); line-height: 1.08; letter-spacing: -.03em; margin: 18px 0 10px; font-weight: 800; }
+  .role { font-size: clamp(17px, 2.2vw, 21px); font-weight: 600; margin: 0 0 18px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  .chip { font-size: 12.5px; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--muted); }
+  .chip.hl { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: var(--accent-soft); font-weight: 600; }
+  .summary { color: var(--muted); max-width: 620px; margin: 8px 0 26px; font-size: 17px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 40px; }
+  .stat { padding: 16px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+  .stat b { display: block; font-size: 28px; font-weight: 800; color: var(--text); line-height: 1.1; }
+  .stat span { font-size: 13px; color: var(--muted); }
+
+  .avatar-wrap { position: relative; justify-self: center; }
+  .avatar { width: 300px; height: 300px; border-radius: 28px; background: linear-gradient(145deg, var(--card-hi), var(--bg-alt)); border: 1px solid var(--line); box-shadow: var(--glow); display: grid; place-items: center; overflow: hidden; }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .avatar .initials { font-size: 96px; font-weight: 800; letter-spacing: -.04em; background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .float { position: absolute; padding: 9px 14px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); font-size: 13px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,.18); animation: bob 4s ease-in-out infinite; white-space: nowrap; }
+  .float.f1 { top: -14px; right: -26px; }
+  .float.f2 { bottom: 18px; left: -40px; animation-delay: 1.5s; }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .scrollcue { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); z-index: 1; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 88px 0; border-top: 1px solid var(--line); }
+  section.alt { background: var(--bg-alt); }
+  .label { font-size: 13px; color: var(--accent); margin: 0 0 8px; letter-spacing: .04em; }
+  h2 { font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -.02em; margin: 0 0 12px; font-weight: 800; }
+  .intro { color: var(--muted); max-width: 680px; margin: 0 0 40px; }
+  h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -.01em; }
+
+  /* About */
+  .about { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; }
+  .about p { margin: 0 0 16px; color: var(--muted); }
+  .about p strong { color: var(--text); }
+  .facts { display: grid; gap: 12px; }
+  .fact { display: flex; gap: 14px; padding: 16px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+  .fact .ic { font-size: 22px; line-height: 1.2; }
+  .fact b { display: block; font-size: 15px; }
+  .fact span { font-size: 14px; color: var(--muted); }
+
+  /* Experience */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--accent), var(--line)); }
+  .job { position: relative; padding: 20px 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); margin-bottom: 16px; }
+  .job::before { content: ""; position: absolute; left: -28px; top: 26px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
+  .job .head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .job .org { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .job .when { font-size: 13px; color: var(--muted); }
+  .job ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .job li { margin-bottom: 4px; }
+  .award { display: flex; gap: 14px; align-items: center; margin-top: 8px; padding: 18px 22px; border-radius: 14px; background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+  .award .ic { font-size: 28px; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .skill { padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); transition: box-shadow .2s, border-color .2s; }
+  .skill:hover { border-color: var(--accent); box-shadow: var(--glow); }
+  .skill h3 { display: flex; gap: 10px; align-items: center; }
+  .skill h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 14px 0 8px; font-weight: 600; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12.5px; padding: 3px 9px; border-radius: 6px; background: var(--bg-alt); border: 1px solid var(--line); color: var(--text); }
+
+  /* Certifications */
+  .certs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .cert { position: relative; padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+  .cert.featured { grid-column: span 3; flex-direction: row; align-items: center; gap: 22px; border-color: var(--accent); box-shadow: var(--glow); }
+  .cert .logo { width: 54px; height: 54px; flex: none; border-radius: 12px; display: grid; place-items: center; font-weight: 800; font-size: 14px; background: var(--accent-soft); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+  .cert .issuer { font-size: 13px; color: var(--muted); }
+  .cert .ftag { position: absolute; top: 14px; right: 14px; font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--accent); }
+  .cert a.verify { font-size: 13px; font-weight: 600; margin-top: auto; }
+  .next { margin-top: 28px; }
+  .next h3 { font-size: 15px; color: var(--muted); font-weight: 600; margin-bottom: 10px; }
+
+  /* Projects */
+  .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .proj { position: relative; display: flex; flex-direction: column; padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); transition: transform .2s, box-shadow .2s, border-color .2s; }
+  .proj:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--glow); }
+  .proj .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .proj .num { font-size: 13px; color: var(--muted); }
+  .proj .emoji { font-size: 26px; }
+  .proj .cat { font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .proj .tagline { font-size: 14px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+  .proj p.desc { font-size: 14px; color: var(--muted); margin: 0 0 14px; flex: 1; }
+  .proj .tags { margin-bottom: 16px; }
+  .proj .foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .status { font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+  .status.planned { background: var(--plan-soft); color: var(--plan); }
+  .status.progress { background: var(--prog-soft); color: var(--prog); }
+  .status.done { background: var(--done-soft); color: var(--done); }
+  .proj a.gh { font-size: 13.5px; font-weight: 600; }
+
+  /* Research */
+  .research { display: grid; grid-template-columns: 1.6fr 1fr; gap: 18px; }
+  .paper { padding: 28px; border-radius: 14px; background: var(--card); border: 1px solid var(--accent); box-shadow: var(--glow); }
+  .paper .kind { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .paper h3 { font-size: 21px; margin: 10px 0 12px; line-height: 1.35; }
+  .paper .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13.5px; color: var(--muted); margin-bottom: 14px; }
+  .paper p { color: var(--muted); margin: 0 0 14px; }
+  .achs { display: grid; gap: 14px; }
+  .ach { padding: 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+  .ach .ic { font-size: 24px; }
+  .ach b { display: block; font-size: 22px; margin: 4px 0 2px; }
+  .ach span { font-size: 14px; color: var(--muted); }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; }
+  .rows { display: grid; gap: 12px; }
+  .row { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+  .row .ic { font-size: 20px; width: 28px; text-align: center; }
+  .row .t { flex: 1; min-width: 0; }
+  .row .t small { display: block; font-size: 12px; color: var(--muted); }
+  .row .t a, .row .t span { font-weight: 600; font-size: 14.5px; color: var(--text); word-break: break-all; }
+  .copy { flex: none; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg-alt); color: var(--muted); cursor: pointer; font-family: inherit; }
+  .copy:hover { color: var(--accent); border-color: var(--accent); }
+  footer { padding: 30px 0; border-top: 1px solid var(--line); text-align: center; font-size: 13px; color: var(--muted); }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .float, .dot { animation: none; } html { scroll-behavior: auto; } }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .avatar-wrap { order: -1; justify-self: start; }
+    .avatar { width: 150px; height: 150px; border-radius: 22px; }
+    .avatar .initials { font-size: 52px; }
+    .float.f1 { top: 10px; right: auto; left: 170px; }
+    .float.f2 { display: none; }
+    .projects, .certs { grid-template-columns: repeat(2, 1fr); }
+    .cert.featured { grid-column: span 2; }
+    .about, .research, .contact { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 860px) {
+    .navlinks { display: none; }
+    .navlinks.open { display: flex; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 20px 16px; }
+    .navlinks.open a { padding: 10px 0; font-size: 16px; }
+    .menu { display: grid; }
+    .navright { margin-left: auto; }
+  }
+  @media (max-width: 620px) {
+    .projects, .certs, .skills { grid-template-columns: 1fr; }
+    .cert.featured { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .hero { padding: 48px 0 64px; }
+    section { padding: 64px 0; }
+    .navright .btn { display: none; }
+    .float.f1 { left: 160px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Home">AA</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="navright">
+      <button class="iconbtn" id="theme" aria-label="Toggle light/dark mode">☀️</button>
+      <a class="btn line" href="cv.pdf" target="_blank" rel="noopener">⬇ Download CV</a>
+      <button class="iconbtn menu" id="menu" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="badge"><span class="dot"></span>Available for opportunities · Ireland</span>
+      <h1>Ayinla Adeyinka Adedapo</h1>
+      <p class="role">IT Support · Cybersecurity · Microsoft 365 &amp; Identity</p>
+      <div class="chips">
+        <span class="chip">Active Directory</span><span class="chip">Entra ID</span><span class="chip">Intune</span><span class="chip">ServiceNow</span><span class="chip">SIEM</span><span class="chip">Incident Response</span>
+      </div>
+      <div class="chips">
+        <span class="chip hl">MSc Cybersecurity</span><span class="chip hl">CompTIA A+</span><span class="chip hl">Network+</span><span class="chip hl">AZ-900</span><span class="chip hl">ISC2 CC</span>
+      </div>
+      <p class="summary">I keep systems running and secure. I've supported users, identities and infrastructure at a national law-enforcement agency and a bank, and I'm now building a public, hands-on L1/L2 support portfolio for Irish IT environments.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#projects">View Projects</a>
+        <a class="btn line" href="https://github.com/AdeyinkaAyinla" target="_blank" rel="noopener">View GitHub</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b class="count" data-to="4">4</b><span>Certifications</span></div>
+        <div class="stat"><b class="count" data-to="11">11</b><span>Support Projects</span></div>
+        <div class="stat"><b class="count" data-to="4">4</b><span>IT Roles Held</span></div>
+        <div class="stat"><b class="count" data-to="1">1</b><span>MSc Research Project</span></div>
+      </div>
+    </div>
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <!-- To use a photo: upload photo.jpg to the repo, then replace the line below with:
+             <img src="photo.jpg" alt="Ayinla Adeyinka Adedapo"> -->
+        <img src="photo.jpg" alt="Ayinla Adeyinka Adedapo">
+      </div>
+      <div class="float f1">🛡️ ISC2 CC</div>
+      <div class="float f2">🎓 MSc Cybersecurity · UL</div>
+    </div>
+  </div>
+  <div class="scrollcue mono">scroll</div>
+</header>
+
+<!-- ================= 01 ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <p class="label mono">01 / About</p>
+    <h2 class="reveal">Who I Am</h2>
+    <p class="intro reveal">Practical day-to-day support, with a security mindset behind every ticket.</p>
+    <div class="about">
+      <div class="reveal">
+        <p>I'm an IT support and cybersecurity professional with experience in <strong>regulated, high-security environments</strong>, including the Economic and Financial Crimes Commission (EFCC) and Polaris Bank. My work has covered Active Directory identity management, endpoint support and patching, access control, security monitoring and incident records.</p>
+        <p>I recently completed an <strong>MSc in Cybersecurity at the University of Limerick</strong>, where my research assessed the privacy and security of wearable health devices in the Irish market.</p>
+        <p>I'm now documenting <strong>11 hands-on L1/L2 support projects</strong> in public, from ServiceNow and Active Directory to Intune and phishing response, and I'm open to IT Support, Service Desk and IT Security roles in Ireland.</p>
+      </div>
+      <div class="facts reveal">
+        <div class="fact"><span class="ic">🏛️</span><div><b>Government &amp; banking</b><span>EFCC · Polaris Bank · Bawoen Trust</span></div></div>
+        <div class="fact"><span class="ic">🇮🇪</span><div><b>Based in Ireland</b><span>Currently at Keldesso Ltd</span></div></div>
+        <div class="fact"><span class="ic">🎓</span><div><b>MSc Cybersecurity</b><span>University of Limerick, 2026</span></div></div>
+        <div class="fact"><span class="ic">🏅</span><div><b>FBI recognition</b><span>Award for Outstanding Service, U.S. DOJ</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 EXPERIENCE ================= -->
+<section id="experience" class="alt">
+  <div class="wrap">
+    <p class="label mono">02 / Experience</p>
+    <h2 class="reveal">Where I've Worked</h2>
+    <p class="intro reveal">IT support and security roles in government, banking and business.</p>
+    <div class="timeline">
+      <div class="job reveal">
+        <div class="head"><div><h3>Admin / IT Support</h3><div class="org">Keldesso Ltd, Ireland</div></div><div class="when mono">2026 – Present</div></div>
+        <ul><li>Supporting staff, managing records and keeping day-to-day operations running in an Irish business environment.</li></ul>
+      </div>
+      <div class="job reveal">
+        <div class="head"><div><h3>IT Systems &amp; Security Support Officer</h3><div class="org">Economic and Financial Crimes Commission (EFCC)</div></div><div class="when mono">2020 – 2025</div></div>
+        <ul>
+          <li>Administered systems, workstations, servers and network infrastructure across a large government agency.</li>
+          <li>Managed Active Directory accounts and access, enforcing least privilege across departments and offices.</li>
+          <li>Monitored systems for security anomalies and service issues, keeping detailed incident and escalation records.</li>
+          <li>Supported secure digital-evidence platforms; worked with international partners including the U.S. Department of Justice.</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="head"><div><h3>IT Security &amp; Infrastructure Technician (Secondment)</h3><div class="org">Polaris Bank Plc</div></div><div class="when mono">2013 – 2014</div></div>
+        <ul>
+          <li>Access control, Active Directory administration, endpoint patching and vulnerability remediation in a regulated financial environment.</li>
+          <li>Maintained audit-ready documentation and escalated security-relevant anomalies.</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="head"><div><h3>IT Support Technician</h3><div class="org">Bawoen Trust Limited</div></div><div class="when mono">2012 – 2013</div></div>
+        <ul><li>Endpoint support, patch and antivirus management, incident records and asset registers.</li></ul>
+      </div>
+    </div>
+    <div class="award reveal"><span class="ic">🏅</span><div><b>Award of Recognition for Outstanding Service</b><br><span style="color:var(--muted);font-size:14px">U.S. Department of Justice, Federal Bureau of Investigation (FBI)</span></div></div>
+  </div>
+</section>
+
+<!-- ================= 03 SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <p class="label mono">03 / Skills</p>
+    <h2 class="reveal">Technical Expertise</h2>
+    <p class="intro reveal">The tools and frameworks I use across support and security work.</p>
+    <div class="skills">
+      <div class="skill reveal">
+        <h3>🖥️ IT Support &amp; Endpoints</h3>
+        <h4>Microsoft</h4>
+        <div class="tags"><span class="tag">Active Directory</span><span class="tag">Group Policy</span><span class="tag">Windows 10/11</span><span class="tag">Windows Server</span><span class="tag">Intune</span><span class="tag">Autopilot</span></div>
+        <h4>Support operations</h4>
+        <div class="tags"><span class="tag">Patch management</span><span class="tag">AV / EDR</span><span class="tag">Asset registers</span><span class="tag">Hardware &amp; printers</span></div>
+      </div>
+      <div class="skill reveal">
+        <h3>☁️ Cloud &amp; Identity</h3>
+        <h4>Microsoft 365</h4>
+        <div class="tags"><span class="tag">Entra ID</span><span class="tag">Exchange Online</span><span class="tag">Teams</span><span class="tag">SharePoint</span></div>
+        <h4>Access security</h4>
+        <div class="tags"><span class="tag">MFA</span><span class="tag">Conditional Access</span><span class="tag">Least privilege</span><span class="tag">Azure (AZ-900)</span><span class="tag">IAM</span></div>
+      </div>
+      <div class="skill reveal">
+        <h3>🛡️ Security Operations</h3>
+        <h4>Monitoring &amp; analysis</h4>
+        <div class="tags"><span class="tag">Splunk</span><span class="tag">Microsoft Sentinel</span><span class="tag">IBM QRadar</span><span class="tag">Wazuh</span><span class="tag">Elastic / ELK</span><span class="tag">Wireshark</span></div>
+        <h4>Testing &amp; vulnerability</h4>
+        <div class="tags"><span class="tag">Nessus</span><span class="tag">OpenVAS</span><span class="tag">Burp Suite</span><span class="tag">nmap</span><span class="tag">Kali Linux</span><span class="tag">Incident response</span></div>
+      </div>
+      <div class="skill reveal">
+        <h3>📋 Service &amp; Governance</h3>
+        <h4>Service management</h4>
+        <div class="tags"><span class="tag">ServiceNow</span><span class="tag">ITIL</span><span class="tag">SLAs</span><span class="tag">Knowledge base</span><span class="tag">PowerShell</span></div>
+        <h4>Frameworks</h4>
+        <div class="tags"><span class="tag">ISO 27001</span><span class="tag">NIST Privacy Framework</span><span class="tag">ISO/IEC 29134</span><span class="tag">GDPR</span><span class="tag">NIS2</span><span class="tag">OWASP API Top 10</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 CERTIFICATIONS ================= -->
+<section id="certifications" class="alt">
+  <div class="wrap">
+    <p class="label mono">04 / Certifications</p>
+    <h2 class="reveal">Credentials</h2>
+    <p class="intro reveal">Industry certifications held, and what's next.</p>
+    <div class="certs" id="certs"></div>
+    <div class="next reveal">
+      <h3>Next on the plan</h3>
+      <div class="tags"><span class="tag">ITIL Foundation</span><span class="tag">Microsoft MD-102 Endpoint Administrator</span><span class="tag">CompTIA Security+ (studying)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 PROJECTS ================= -->
+<section id="projects">
+  <div class="wrap">
+    <p class="label mono">05 / Projects</p>
+    <h2 class="reveal">IT Support Portfolio</h2>
+    <p class="intro reveal">11 hands-on L1/L2 projects built for <em>Liffey Logistics</em>, a fictional 25-person Dublin company. Each is documented on GitHub with build steps, real troubleshooting and a security review.</p>
+    <div class="projects" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- ================= 06 RESEARCH ================= -->
+<section id="research" class="alt">
+  <div class="wrap">
+    <p class="label mono">06 / Research</p>
+    <h2 class="reveal">Research &amp; Achievements</h2>
+    <p class="intro reveal">MSc Cybersecurity final project, University of Limerick.</p>
+    <div class="research">
+      <div class="paper reveal">
+        <div class="kind mono">MSc Research Project</div>
+        <h3>"Your Fitbit is Watching": A Privacy and Security Risk Assessment of Wearable Health Devices in the Irish Market</h3>
+        <div class="meta"><span>🎓 University of Limerick</span><span>📅 2026</span><span>👤 Supervisor: Dr. Gabriel Leen</span></div>
+        <p>An empirical, GDPR-aligned Privacy Impact Assessment of Apple Watch and Fitbit using network traffic analysis, app permission auditing, privacy policy analysis and technical security testing.</p>
+        <div class="tags"><span class="tag">Wireshark</span><span class="tag">sslyze</span><span class="tag">OWASP API Top 10</span><span class="tag">NIST Privacy Framework</span><span class="tag">ISO/IEC 29134</span><span class="tag">GDPR</span></div>
+      </div>
+      <div class="achs">
+        <div class="ach reveal"><span class="ic">📡</span><b>20</b><span>Structured network capture sessions across both ecosystems</span></div>
+        <div class="ach reveal"><span class="ic">🔎</span><b>5</b><span>Advertising &amp; tracking networks found alongside Fitbit health-data uploads</span></div>
+        <div class="ach reveal"><span class="ic">🔐</span><b>TLS 1.3</b><span>Confirmed throughout the Apple Watch environment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <p class="label mono">07 / Contact</p>
+    <div class="contact">
+      <div class="reveal">
+        <h2>Get In Touch</h2>
+        <p class="intro">Open to IT Support Engineer, Service Desk and IT Security roles in Ireland. LinkedIn is the quickest way to reach me.</p>
+        <div class="ctas">
+          <a class="btn solid" href="https://www.linkedin.com/in/adeyinka-ayinla-b7836386/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="btn line" href="cv.pdf" target="_blank" rel="noopener">⬇ Download CV</a>
+        </div>
+      </div>
+      <div class="rows reveal">
+        <div class="row"><span class="ic">📍</span><div class="t"><small>Location</small><span>Ireland</span></div></div>
+        <div class="row"><span class="ic">💼</span><div class="t"><small>LinkedIn</small><a href="https://www.linkedin.com/in/adeyinka-ayinla-b7836386/" target="_blank" rel="noopener">linkedin.com/in/adeyinka-ayinla-b7836386</a></div><button class="copy" data-copy="https://www.linkedin.com/in/adeyinka-ayinla-b7836386/">Copy</button></div>
+        <div class="row"><span class="ic">🐙</span><div class="t"><small>GitHub</small><a href="https://github.com/AdeyinkaAyinla" target="_blank" rel="noopener">github.com/AdeyinkaAyinla</a></div><button class="copy" data-copy="https://github.com/AdeyinkaAyinla">Copy</button></div>
+        <div class="row"><span class="ic">✅</span><div class="t"><small>Availability</small><span>Available now · Full right to work in Ireland</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Ayinla Adeyinka Adedapo · Built and hosted on GitHub Pages</footer>
+
+<script>
+  /* =====================================================================
+     EDIT HERE WHEN THINGS CHANGE
+     ---------------------------------------------------------------------
+     PROJECTS: change "status" to "planned", "progress" or "done".
+               Optionally fill "metric" with a result, e.g. "15 tickets · 5 KB articles".
+     CERTS:    paste your Credly / verification link into "verify" to show
+               a "Verify →" link. Leave it "" to hide the link.
+     ===================================================================== */
+  const projects = [
+    { n:"00", emoji:"🔧", cat:"Desktop Support", title:"Hardware & Desktop Basics", tagline:"Rebuild, reimage and set up a new starter's desk.", desc:"Hardware swaps, Windows 11 install from USB, printer fault-finding, docks and dual monitors, plus a new-laptop checklist.", tags:["Hardware","Windows 11","Printers"], level:"L1", status:"planned", metric:"", folder:"00-hardware-basics" },
+    { n:"01", emoji:"🎫", cat:"Service Desk", title:"ServiceNow & ITIL Workflow", tagline:"A working service desk with SLAs and a knowledge base.", desc:"Categories, P1–P4 priorities, SLA targets, 15 realistic tickets worked to resolution, escalations and KB articles.", tags:["ServiceNow","ITIL","SLAs"], level:"L1", status:"planned", metric:"", folder:"01-servicenow-helpdesk" },
+    { n:"02", emoji:"🏢", cat:"Identity", title:"Active Directory Domain Lab", tagline:"Central identity for a 25-person company.", desc:"Windows Server domain controller with DNS and DHCP, OU design by department, security groups and NTFS-permissioned file shares.", tags:["AD DS","DNS","DHCP","Hyper-V"], level:"L1/L2", status:"planned", metric:"", folder:"02-active-directory-lab" },
+    { n:"03", emoji:"📜", cat:"Automation", title:"Group Policy & Onboarding", tagline:"Consistent settings and a reliable joiner-mover-leaver process.", desc:"Password, drive-mapping, USB and screen-lock GPOs, gpresult troubleshooting, and PowerShell bulk user creation from CSV.", tags:["GPO","PowerShell","JML"], level:"L1/L2", status:"planned", metric:"", folder:"03-group-policy-onboarding" },
+    { n:"04", emoji:"✉️", cat:"Microsoft 365", title:"Microsoft 365 Administration", tagline:"Email, Teams and SharePoint run like an MSP would.", desc:"Group-based licensing, shared and room mailboxes, Teams and SharePoint permissions, and five mail-flow and access tickets solved.", tags:["Exchange Online","Teams","SharePoint"], level:"L1/L2", status:"planned", metric:"", folder:"04-m365-administration" },
+    { n:"05", emoji:"🔐", cat:"Identity Security", title:"Entra ID Access Security", tagline:"Every sign-in protected, suspicious ones investigated.", desc:"MFA, self-service password reset, Conditional Access policies, Entra Connect hybrid sync and a sign-in log investigation.", tags:["Entra ID","MFA","Conditional Access"], level:"L2", status:"planned", metric:"", folder:"05-entra-id-security" },
+    { n:"06", emoji:"📱", cat:"Endpoint Management", title:"Intune Endpoint & Mobile", tagline:"Laptops and phones secured from the cloud.", desc:"Compliance policies, BitLocker, app deployment, update rings, Autopilot and iOS/Android enrolment, plus non-compliance troubleshooting.", tags:["Intune","Autopilot","BitLocker"], level:"L2", status:"planned", metric:"", folder:"06-intune-endpoint-mobile" },
+    { n:"07", emoji:"🌐", cat:"Networking", title:"Network Troubleshooting Lab", tagline:"Six real-world faults, found and fixed.", desc:"Office network with VLANs, DHCP and DNS in Packet Tracer, deliberately broken and repaired using the OSI model.", tags:["TCP/IP","VLANs","Packet Tracer"], level:"L1/L2", status:"planned", metric:"", folder:"07-network-troubleshooting" },
+    { n:"08", emoji:"⚡", cat:"Scripting", title:"PowerShell Support Toolkit", tagline:"Repetitive desk tasks, automated.", desc:"Scripts for account unlocks, inactive-user reports, disk and system info, and log collection, with help and error handling.", tags:["PowerShell","AD module","Reporting"], level:"L2", status:"planned", metric:"", folder:"08-powershell-toolkit" },
+    { n:"09", emoji:"🛡️", cat:"Security Ops", title:"Patching, Backup & Phishing", tagline:"Stay patched, recover fast, respond to phishing.", desc:"Defender configuration, update rings, backup and test restore, and a full phishing incident from report to user communication.", tags:["Defender","Backup","Incident Response"], level:"L2", status:"planned", metric:"", folder:"09-patching-backup-phishing" },
+    { n:"10", emoji:"🏁", cat:"Capstone", title:"MSP Week Simulation", tagline:"A full week of mixed support work, within SLA.", desc:"20 tickets across every earlier project, client-facing emails and a weekly service report with improvement suggestions.", tags:["SLAs","Escalation","Reporting"], level:"L1/L2", status:"planned", metric:"", folder:"10-msp-capstone" }
+  ];
+
+  const certs = [
+    { short:"CC",  name:"ISC2 Certified in Cybersecurity (CC)", issuer:"ISC2", note:"Security principles, access control, network security, incident response and security operations.", verify:"", featured:true },
+    { short:"A+",  name:"CompTIA A+", issuer:"CompTIA", note:"Hardware, operating systems, troubleshooting and support.", verify:"" },
+    { short:"N+",  name:"CompTIA Network+", issuer:"CompTIA", note:"Networking concepts, infrastructure and troubleshooting.", verify:"" },
+    { short:"AZ",  name:"Microsoft Azure Fundamentals (AZ-900)", issuer:"Microsoft", note:"Cloud concepts, Azure services, security and governance.", verify:"" }
+  ];
+
+  /* ---------- Render projects ---------- */
+  const statusLabel = { planned:"Planned", progress:"In Progress", done:"Complete" };
+  const repo = "https://github.com/AdeyinkaAyinla/IT-Support-Portfolio/tree/main/";
+  const pg = document.getElementById("projects-grid");
+  projects.forEach(p => {
+    const d = document.createElement("article");
+    d.className = "proj reveal";
+    d.innerHTML =
+      '<div class="top"><span class="num mono">' + p.n + ' · ' + p.level + '</span><span class="emoji">' + p.emoji + '</span></div>' +
+      '<div class="cat">' + p.cat + '</div>' +
+      '<h3>' + p.title + '</h3>' +
+      '<p class="tagline">' + p.tagline + '</p>' +
+      '<p class="desc">' + p.desc + (p.metric ? '<br><span class="mono" style="color:var(--accent);font-size:12.5px">' + p.metric + '</span>' : '') + '</p>' +
+      '<div class="tags">' + p.tags.map(t => '<span class="tag">' + t + '</span>').join("") + '</div>' +
+      '<div class="foot"><span class="status ' + p.status + '">' + statusLabel[p.status] + '</span>' +
+      '<a class="gh" href="' + repo + p.folder + '" target="_blank" rel="noopener">View on GitHub →</a></div>';
+    pg.appendChild(d);
+  });
+
+  /* ---------- Render certifications ---------- */
+  const cg = document.getElementById("certs");
+  certs.forEach(c => {
+    const d = document.createElement("div");
+    d.className = "cert reveal" + (c.featured ? " featured" : "");
+    d.innerHTML =
+      (c.featured ? '<span class="ftag mono">FEATURED</span>' : '') +
+      '<div class="logo">' + c.short + '</div>' +
+      '<div style="display:flex;flex-direction:column;gap:4px;flex:1">' +
+        '<h3>' + c.name + '</h3>' +
+        '<div class="issuer">' + c.issuer + ' · ✅ Achieved</div>' +
+        '<div class="issuer">' + c.note + '</div>' +
+        (c.verify ? '<a class="verify" href="' + c.verify + '" target="_blank" rel="noopener">Verify →</a>' : '') +
+      '</div>';
+    cg.appendChild(d);
+  });
+
+  /* ---------- Theme toggle (remembers choice) ---------- */
+  const root = document.documentElement, tbtn = document.getElementById("theme");
+  function setTheme(t) { root.setAttribute("data-theme", t); tbtn.textContent = t === "dark" ? "☀️" : "🌙"; }
+  let saved = null; try { saved = localStorage.getItem("theme"); } catch (e) {}
+  setTheme(saved || "dark");
+  tbtn.addEventListener("click", () => {
+    const t = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    setTheme(t); try { localStorage.setItem("theme", t); } catch (e) {}
+  });
+
+  /* ---------- Mobile menu ---------- */
+  const nl = document.getElementById("navlinks");
+  document.getElementById("menu").addEventListener("click", () => nl.classList.toggle("open"));
+  nl.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nl.classList.remove("open")));
+
+  /* ---------- Copy buttons ---------- */
+  document.querySelectorAll(".copy").forEach(b => b.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copied ✓"; }
+    catch (e) { b.textContent = "Copy failed"; }
+    setTimeout(() => b.textContent = "Copy", 1600);
+  }));
+
+  /* ---------- Scroll reveal + counters ---------- */
+  const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }), { threshold: .12 }) : null;
+  document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+
+  document.querySelectorAll(".count").forEach(el => {
+    const to = +el.dataset.to; let n = 0; el.textContent = "0";
+    const step = () => { n++; el.textContent = n; if (n < to) setTimeout(step, 900 / to); };
+    setTimeout(step, 300);
+  });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
